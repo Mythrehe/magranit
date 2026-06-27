@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Home page 02 – magranit – Online Courses & Education",
+  title: " Magran",
   description: "magranit Homepage 02 clone built with Next.js, React, Ant Design, and TypeScript.",
 };
 

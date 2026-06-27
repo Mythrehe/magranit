@@ -2,7 +2,7 @@
 
 .mo-steps {
   background-color: var(--light-color); /* White background matching FAQ */
-  padding: 60px 0;
+  padding: 35px 0;
   color: var(--slate-color);
   position: relative;
   overflow: hidden;

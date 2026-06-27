@@ -2,7 +2,7 @@
 
 .mo-testimonials {
   background-color: #eef4f6; /* Soft blue/gray background matching hero */
-  padding: 60px 0;
+  padding: 35px 0;
   color: var(--slate-color);
   position: relative;
   overflow: hidden;
@@ -34,7 +34,7 @@
 /* Section Header */
 .mo-testimonials-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .mo-testimonials-badge {
@@ -68,10 +68,12 @@
   margin-top: 40px;
   position: relative;
   z-index: 5;
+  width: 100%;
+  overflow: hidden;
 }
 
 .mo-testimonial-slide-padding {
-  padding: 15px 15px 40px 15px; /* Gaps between slides and bounds for shadows/tilts */
+  padding: 15px 10px 40px 10px; /* Reduced side padding slightly for better responsiveness */
 }
 
 /* Tilted Card layout */
@@ -170,6 +172,11 @@
   .mo-testimonials-title {
     font-size: 34px;
   }
+  /* Disable tilt transforms on tablets and mobile to prevent layout clipping */
+  .card-tilt-2,
+  .card-tilt-4 {
+    transform: none !important;
+  }
 }
 
 @media (max-width: 767px) {
@@ -179,11 +186,6 @@
   .mo-testimonial-card-tilted {
     padding: 24px 20px;
     min-height: auto;
-  }
-  /* Disable tilt transforms on mobile */
-  .card-tilt-2,
-  .card-tilt-4 {
-    transform: none;
   }
 }
 

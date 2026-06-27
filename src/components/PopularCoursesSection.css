@@ -2,14 +2,14 @@
 
 .mo-courses {
   background-color: var(--light-gray);
-  padding: 60px 0;
+  padding: 35px 0;
   color: var(--slate-color);
   border-bottom: 1px solid var(--border-color);
 }
 
 .mo-courses-header {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .mo-courses-badge {
