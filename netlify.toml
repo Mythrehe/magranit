@@ -1,0 +1,18 @@
+# Netlify configuration for Magranit — Next.js static export
+
+[build]
+  command   = "npm run build"
+  publish   = "out"
+
+# Safety-net: if a clean URL still can't find a file, serve its index.html
+[[redirects]]
+  from   = "/:path"
+  to     = "/:path/index.html"
+  status = 200
+  force  = false
+
+# Fallback: unknown routes → homepage (optional, prevents blank 404 screen)
+[[redirects]]
+  from   = "/*"
+  to     = "/index.html"
+  status = 404
