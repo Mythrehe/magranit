@@ -6,11 +6,10 @@ export function generateStaticParams() {
   return [
     { slug: "sap-mm" },
     { slug: "sap-abap" },
-    { slug: "sap-sd" },
-    { slug: "sap-fico" },
-    { slug: "sap-hcm" },
+    { slug: "sap-ariba" },
+    { slug: "sap-pm" },
     { slug: "sap-basis" },
-    { slug: "sap-s4hana" },
+    { slug: "sap-cloud" },
     { slug: "ai-engineering" },
     { slug: "data-engineering" },
   ];
