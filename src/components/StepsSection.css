@@ -1,0 +1,231 @@
+/* Steps Section Styling - Unique Split Timeline Layout */
+
+.mo-steps {
+  background-color: var(--light-color); /* White background matching FAQ */
+  padding: 60px 0;
+  color: var(--slate-color);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mo-steps-grid-split {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 70px;
+  align-items: center;
+  position: relative;
+  z-index: 5;
+}
+
+/* Left Content Column */
+.mo-steps-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mo-steps-badge {
+  color: #e85b3b; /* Reddish orange matching FAQ */
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.mo-steps-title {
+  font-size: 44px;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+}
+
+.mo-steps-desc-para {
+  font-size: 16px;
+  color: var(--slate-color);
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.mo-steps-cta-btn {
+  background-color: #e85b3b;
+  color: #ffffff;
+  font-family: var(--font-secondary);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 15px 35px;
+  border-radius: 9999px;
+  display: inline-block;
+  box-shadow: 0 5px 15px rgba(232, 91, 59, 0.25);
+  transition: all 0.3s;
+}
+
+.mo-steps-cta-btn:hover {
+  background-color: #d64a2b;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+/* Right Timeline Column */
+.mo-steps-right {
+  width: 100%;
+}
+
+.mo-steps-timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+/* Vertical line connecting steps */
+.mo-steps-line-connector {
+  position: absolute;
+  left: 44px;
+  top: 25px;
+  bottom: 25px;
+  width: 2px;
+  background-color: var(--border-color);
+  z-index: 1;
+}
+
+.mo-timeline-step-item {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+.mo-timeline-step-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Step number wrap */
+.mo-timeline-step-num-wrap {
+  flex-shrink: 0;
+}
+
+.mo-timeline-step-num {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--light-color);
+  border: 2px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--slate-color);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.mo-timeline-step-content {
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.mo-timeline-step-content h4 {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.mo-timeline-step-content p {
+  font-size: 14px;
+  color: var(--slate-color);
+  line-height: 1.5;
+}
+
+/* Hover effects */
+.mo-timeline-step-item:hover .mo-timeline-step-num {
+  background-color: #e85b3b;
+  border-color: #e85b3b;
+  color: #ffffff;
+  box-shadow: 0 0 15px rgba(232, 91, 59, 0.35);
+  transform: scale(1.05);
+}
+
+.mo-timeline-step-item:hover .mo-timeline-step-content h4 {
+  color: #e85b3b;
+}
+
+.mo-timeline-step-item:hover .mo-timeline-step-content {
+  transform: translateX(6px);
+}
+
+/* Background floating icons */
+.mo-steps-star-1 {
+  position: absolute;
+  top: 15%;
+  right: 5%;
+  width: 35px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.mo-steps-star-2 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  width: 30px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .mo-steps-grid-split {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  .mo-steps-left {
+    align-items: center;
+    text-align: center;
+  }
+  .mo-steps-title {
+    font-size: 36px;
+  }
+  .mo-steps-timeline {
+    padding-left: 0;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .mo-steps {
+    padding: 40px 0;
+  }
+  .mo-steps-title {
+    font-size: 30px;
+  }
+  .mo-timeline-step-item {
+    gap: 18px;
+  }
+  .mo-timeline-step-num {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mo-steps-title {
+    font-size: 25px;
+  }
+  .mo-steps-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+

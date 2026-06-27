@@ -1,0 +1,201 @@
+/* Testimonials Section Styling - Matches Screenshot Exactly */
+
+.mo-testimonials {
+  background-color: #eef4f6; /* Soft blue/gray background matching hero */
+  padding: 60px 0;
+  color: var(--slate-color);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Background floating clouds */
+.mo-testimonials-cloud {
+  position: absolute;
+  opacity: 0.6;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.mo-t-cloud-1 {
+  top: 15%;
+  left: 8%;
+  width: 55px;
+  height: auto;
+}
+
+.mo-t-cloud-2 {
+  top: 18%;
+  right: 8%;
+  width: 60px;
+  height: auto;
+}
+
+/* Section Header */
+.mo-testimonials-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mo-testimonials-badge {
+  color: #e85b3b; /* Reddish orange badge color */
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.mo-testimonials-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: var(--dark-color);
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.mo-testimonials-desc {
+  font-size: 15px;
+  color: var(--slate-color);
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Ant Design Carousel Slide Spacing */
+.mo-testimonials-carousel-wrapper {
+  margin-top: 40px;
+  position: relative;
+  z-index: 5;
+}
+
+.mo-testimonial-slide-padding {
+  padding: 15px 15px 40px 15px; /* Gaps between slides and bounds for shadows/tilts */
+}
+
+/* Tilted Card layout */
+.mo-testimonial-card-tilted {
+  width: 100%; /* Spans Carousel slide width */
+  background-color: var(--light-color);
+  border-radius: 24px;
+  padding: 35px 30px;
+  box-shadow: 0 8px 30px rgba(8, 8, 29, 0.03);
+  display: flex;
+  flex-direction: column;
+  min-height: 290px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+/* Tilted card rotations matching screenshot */
+.card-tilt-1 {
+  transform: rotate(0deg);
+}
+
+.card-tilt-2 {
+  transform: translateY(12px) rotate(-1.5deg);
+}
+
+.card-tilt-3 {
+  transform: rotate(0deg);
+}
+
+.card-tilt-4 {
+  transform: translateY(10px) rotate(-1.2deg);
+}
+
+/* Hover effects */
+.mo-testimonial-card-tilted:hover {
+  transform: translateY(-8px) scale(1.02) !important;
+  box-shadow: 0 15px 40px rgba(8, 8, 29, 0.08);
+}
+
+.mo-t-card-content {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--slate-color);
+  flex-grow: 1;
+  margin-bottom: 25px;
+  font-style: normal;
+}
+
+/* Separator line */
+.mo-t-card-separator {
+  height: 1px;
+  background-color: var(--border-color);
+  margin-bottom: 25px;
+}
+
+/* User Info styling */
+.mo-t-card-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.mo-t-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: var(--light-gray);
+  border: 1px solid var(--border-color);
+}
+
+.mo-t-card-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mo-t-card-user-info {
+  text-align: left;
+}
+
+.mo-t-card-user-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--dark-color);
+  margin-bottom: 2px;
+}
+
+.mo-t-card-user-role {
+  font-size: 12px;
+  color: var(--slate-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .mo-testimonials-title {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mo-testimonials-title {
+    font-size: 28px;
+  }
+  .mo-testimonial-card-tilted {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+  /* Disable tilt transforms on mobile */
+  .card-tilt-2,
+  .card-tilt-4 {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .mo-testimonials {
+    padding: 40px 0;
+  }
+  .mo-testimonials-title {
+    font-size: 24px;
+  }
+  .mo-testimonial-slide-padding {
+    padding: 10px 8px 30px 8px;
+  }
+}
+

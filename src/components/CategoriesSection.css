@@ -1,0 +1,145 @@
+/* Course Categories Section Styling */
+
+.mo-categories {
+  background-color: #08081d;
+  padding: 60px 0;
+  color: var(--light-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.mo-categories-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.mo-categories-badge {
+  color: var(--primary-color);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.mo-categories-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--light-color);
+  margin-bottom: 20px;
+}
+
+.mo-categories-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.mo-category-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.mo-category-card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
+}
+
+.mo-category-icon {
+  font-size: 28px;
+  color: var(--primary-color);
+  background-color: rgba(255, 182, 6, 0.08);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s;
+}
+
+.mo-category-card:hover .mo-category-icon {
+  background-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.mo-category-info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--light-color);
+  margin-bottom: 6px;
+}
+
+.mo-category-info span {
+  font-size: 13px;
+  color: var(--slate-color);
+}
+
+.mo-categories-footer {
+  text-align: center;
+}
+
+.mo-categories-footer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 12px 24px;
+  border-radius: 9999px;
+  color: var(--light-color);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.mo-categories-footer-badge a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+/* Floating Stars Background */
+.mo-categories-star-1 {
+  position: absolute;
+  top: 10%;
+  left: 8%;
+  width: 35px;
+  opacity: 0.2;
+}
+
+.mo-categories-star-2 {
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+  width: 30px;
+  opacity: 0.2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .mo-categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .mo-categories-grid {
+    grid-template-columns: 1fr;
+  }
+  .mo-categories-title {
+    font-size: 32px;
+  }
+}
+
