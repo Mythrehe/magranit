@@ -1,5 +1,4 @@
-# Netlify _redirects — backup for clean URL routing
-# Next.js static export generates /route/index.html (trailingSlash: true)
-# Netlify serves these automatically, but this ensures no 404s slip through
-
-/*    /index.html   404
+# Netlify redirect configurations
+# Next.js static export generates nested directory HTML files (trailingSlash: true)
+# Netlify automatically serves these clean URL paths (e.g. /courses/sap-mm/ resolving to /courses/sap-mm/index.html)
+# Any missing routes will naturally fall back to the exported 404.html page

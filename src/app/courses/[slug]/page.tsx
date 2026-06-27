@@ -5,6 +5,7 @@ import CourseDetailsClient from "./CourseDetailsClient";
 export function generateStaticParams() {
   return [
     { slug: "sap-mm" },
+    { slug: "sap-abap" },
     { slug: "sap-sd" },
     { slug: "sap-fico" },
     { slug: "sap-hcm" },
